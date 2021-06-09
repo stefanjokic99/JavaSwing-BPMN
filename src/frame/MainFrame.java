@@ -6,6 +6,8 @@ import java.awt.Point;
 
 import javax.swing.JFrame;
 
+import listeners.CustomWindowListener;
+
 /**
  * Glavni prozor
  * @author Grupa1
@@ -25,7 +27,7 @@ public class MainFrame extends JFrame{
 		
 		//Postavljanje naslova i nacina iskljucivanja glavnog prozora
 		setTitle("Empresa BPMN");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		
 		//Podesavanje minimalne, pocetne i granicnih velicina
 		screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
@@ -42,6 +44,8 @@ public class MainFrame extends JFrame{
 		
 		//Dodavanje glavnog panela
 		getContentPane().add(new MainPanel());
+		
+		addWindowListener(new CustomWindowListener());
 		
 		//Podesavanje vidljivosti
 		setVisible(true);
