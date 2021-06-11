@@ -6,6 +6,7 @@ import java.awt.Point;
 
 import javax.swing.JFrame;
 
+import frame.menubar.CustomMenuBar;
 import listeners.CustomWindowListener;
 
 /**
@@ -42,8 +43,9 @@ public class MainFrame extends JFrame{
 		//Postavljanje ikonice 
 		setIconImage(java.awt.Toolkit.getDefaultToolkit().getImage("images/logo/logo_no_background.png").getScaledInstance(500, 500, Image.SCALE_SMOOTH));
 		
-		//Dodavanje glavnog panela
+		//Dodavanje glavnog panela i menija
 		getContentPane().add(new MainPanel());
+		setJMenuBar(new CustomMenuBar());
 		
 		addWindowListener(new CustomWindowListener());
 		

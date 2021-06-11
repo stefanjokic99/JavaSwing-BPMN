@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 public class GeneralHelper {
 
 	public static Icon getIconFromName(String iconName) {
-		Image iconImage = Toolkit.getDefaultToolkit().getImage("icons/" + iconName +  ".png");
+		Image iconImage = Toolkit.getDefaultToolkit().getImage("images/icons/" + iconName +  ".png");
 		return new ImageIcon(iconImage);
 	}
 }

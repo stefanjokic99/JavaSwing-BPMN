@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+encoding//src/frame/menubar/menu/MenuProjekat.java=UTF-8
 encoding//src/listeners/CustomWindowListener.java=UTF-8
+encoding//src/listeners/menu/MenuProjekatActionListener.java=UTF-8
