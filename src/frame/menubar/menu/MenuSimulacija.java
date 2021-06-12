@@ -1,0 +1,49 @@
+package frame.menubar.menu;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
+import listeners.menu.MenuSimulacijaActionListener;
+
+public class MenuSimulacija extends JMenu{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	JMenuItem menuItemPokretanjeSimulacije = null;
+	JMenuItem menuItemZatvaranjeSimulacije = null;
+	JMenuItem menuItemZaustavljanjeSimulacije = null;
+	JMenuItem menuItemVerifikacijaSimulacije = null;
+	MenuSimulacijaActionListener actionListener = null;
+	
+	public MenuSimulacija()
+	{
+		setText("Simulacija");
+		
+		actionListener = new MenuSimulacijaActionListener();
+		
+		menuItemPokretanjeSimulacije = new JMenuItem("Pokreni");
+		menuItemPokretanjeSimulacije.setActionCommand("pokretanje simulacije");
+		menuItemPokretanjeSimulacije.addActionListener(actionListener);
+		
+		menuItemZatvaranjeSimulacije = new JMenuItem("Zatvori");
+		menuItemZatvaranjeSimulacije.setActionCommand("zatvaranje simulacije");
+		menuItemZatvaranjeSimulacije.addActionListener(actionListener);
+		
+		menuItemZaustavljanjeSimulacije = new JMenuItem("Zaustavi");
+		menuItemZaustavljanjeSimulacije.setActionCommand("zaustavljanje simulacije");
+		menuItemZaustavljanjeSimulacije.addActionListener(actionListener);
+		
+		menuItemVerifikacijaSimulacije = new JMenuItem("Verifikuj");
+		menuItemVerifikacijaSimulacije.setActionCommand("verifikacija simulacije");
+		menuItemVerifikacijaSimulacije.addActionListener(actionListener);
+		
+		add(menuItemPokretanjeSimulacije);
+		add(menuItemZatvaranjeSimulacije);
+		add(menuItemZaustavljanjeSimulacije);
+		addSeparator();
+		add(menuItemVerifikacijaSimulacije);
+	}
+}

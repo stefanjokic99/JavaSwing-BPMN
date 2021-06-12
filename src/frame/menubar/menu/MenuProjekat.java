@@ -6,47 +6,110 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
-import helpers.GeneralHelper;
+import listeners.menu.MenuProjekatActionListener;
 
 public class MenuProjekat extends JMenu {
 
 	private static final long serialVersionUID = 1L;
 
+	JMenu menuNovi = null;
+	JMenu menuOtvori = null;
 	JMenuItem menuItemNoviProjekat = null;
+	JMenuItem menuItemNoviDijagram = null;
 	JMenuItem menuItemOtvoriProjekat = null;
-	JMenuItem menuItemCuvanjeProjekta = null;
+	JMenuItem menuItemOtvoriDijagram = null;
+	JMenuItem menuItemZatvoriProjekat = null;
+	JMenuItem menuItemZatvoriSveProjekte = null;
+	JMenuItem menuItemSacuvaj = null;
+	JMenuItem menuItemSacuvajKao = null;
+	JMenuItem menuItemStampanje = null;
+	JMenuItem menuItemPreimenovanje = null;
+	JMenuItem menuItemIzlaz = null;
+	MenuProjekatActionListener actionListener = null;
 	
 	public MenuProjekat() {
 		setText("Projekat");
 		setMnemonic(KeyEvent.VK_F);
 		
-		menuItemNoviProjekat = new JMenuItem("Novi projekat");
-		menuItemNoviProjekat.setIcon(GeneralHelper.getIconFromName("application_add"));
-		menuItemNoviProjekat.setMnemonic(KeyEvent.VK_N);
-		menuItemNoviProjekat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_MASK));
+		actionListener = new MenuProjekatActionListener();
+		
+		menuNovi = new JMenu("Novi");
+		menuNovi.setMnemonic(KeyEvent.VK_N);
+		
+		menuItemNoviProjekat = new JMenuItem("Projekat");
 		menuItemNoviProjekat.setActionCommand("novi projekat");
 		menuItemNoviProjekat.addActionListener(actionListener);
 		
-		add(menuItemNoviProjekat);
+		menuItemNoviDijagram = new JMenuItem("Dijagram");
+		menuItemNoviDijagram.setActionCommand("novi dijagram");
+		menuItemNoviDijagram.addActionListener(actionListener);
 		
-		menuItemOtvoriProjekat = new JMenuItem("Otvori projekat");
-		menuItemOtvoriProjekat.setIcon(GeneralHelper.getIconFromName("application_add"));
-		menuItemOtvoriProjekat.setMnemonic(KeyEvent.VK_O);
-		menuItemOtvoriProjekat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, KeyEvent.CTRL_MASK));
+		menuNovi.add(menuItemNoviProjekat);
+		menuNovi.add(menuItemNoviDijagram);
+		add(menuNovi);
+		
+		menuOtvori = new JMenu("Otvori iz pretraživača datoteka");
+		menuOtvori.setMnemonic(KeyEvent.VK_O);
+		
+		menuItemOtvoriProjekat = new JMenuItem("Projekat");
 		menuItemOtvoriProjekat.setActionCommand("otvori projekat");
 		menuItemOtvoriProjekat.addActionListener(actionListener);
 		
-		add(menuItemOtvoriProjekat);
+		menuItemOtvoriDijagram = new JMenuItem("Dijagram");
+		menuItemOtvoriDijagram.setActionCommand("otvori dijagram");
+		menuItemOtvoriDijagram.addActionListener(actionListener);
+		
+		menuOtvori.add(menuItemOtvoriProjekat);
+		menuOtvori.add(menuItemOtvoriDijagram);
+		add(menuOtvori);
 		
 		addSeparator();
 		
-		menuItemCuvanjeProjekta = new JMenuItem("Čuvanje");
-		menuItemCuvanjeProjekta.setIcon(GeneralHelper.getIconFromName("application_add"));
-		menuItemCuvanjeProjekta.setMnemonic(KeyEvent.VK_S);
-		menuItemCuvanjeProjekta.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_MASK));
-		menuItemCuvanjeProjekta.addActionListener(actionListener);
+		menuItemZatvoriProjekat = new JMenuItem("Zatvori projekat");
+		menuItemZatvoriProjekat.setActionCommand("zatvori projekat");
+		menuItemZatvoriProjekat.addActionListener(actionListener);
 		
-		add(menuItemCuvanjeProjekta);
+		menuItemZatvoriSveProjekte = new JMenuItem("Zatvori sve projekte");
+		menuItemZatvoriSveProjekte.setActionCommand("zatvori sve projekte");
+		menuItemZatvoriSveProjekte.addActionListener(actionListener);
+		
+		add(menuItemZatvoriProjekat);
+		add(menuItemZatvoriSveProjekte);
+		
+		addSeparator();
+		
+		menuItemSacuvaj = new JMenuItem("Sačuvaj");
+		menuItemSacuvaj.setMnemonic(KeyEvent.VK_S);
+		menuItemSacuvaj.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_MASK));
+		menuItemSacuvaj.setActionCommand("sacuvaj");
+		menuItemSacuvaj.addActionListener(actionListener);
+		
+		menuItemSacuvajKao = new JMenuItem("Sačuvaj kao");
+		menuItemSacuvajKao.setActionCommand("sacuvaj kao");
+		menuItemSacuvajKao.addActionListener(actionListener);
+		
+		add(menuItemSacuvaj);
+		add(menuItemSacuvajKao);
+		
+		addSeparator();
+		
+		menuItemStampanje = new JMenuItem("Stampanje");
+		menuItemStampanje.setActionCommand("stampanje");
+		menuItemStampanje.addActionListener(actionListener);
+		
+		menuItemPreimenovanje = new JMenuItem("Preimenovanje");
+		menuItemPreimenovanje.setActionCommand("preimenovanje");
+		menuItemPreimenovanje.addActionListener(actionListener);
+		
+		add(menuItemStampanje);
+		add(menuItemPreimenovanje);
+		
+		addSeparator();
+		
+		menuItemIzlaz = new JMenuItem("Izlaz");
+		menuItemIzlaz.setActionCommand("izlaz");
+		menuItemIzlaz.addActionListener(actionListener);
+		
+		add(menuItemIzlaz);
 	}
-
 }

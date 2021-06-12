@@ -6,44 +6,40 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-public class MenuProjekatActionListener implements ActionListener{
+public class MenuUredjivanjeActionListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-			
 		switch(e.getActionCommand())
 		{
-			case "novi projekat":
+			case "ponisti prethodni korak":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "novi dijagram":
+			case "povrati ponisteni korak":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "otvori projekat": 
+			case "isjecanje":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "otvori dijagram": 
+			case "kopiranje":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "zatvori projekat": 
+			case "lijepljenje":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "zatvori sve projekte": 
+			case "oznacavanje":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "sacuvaj": 
+			case "oznaci sve":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "sacuvaj kao": 
+			case "ubaci element":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "stampanje": 
+			case "obrisi oznacene elemente":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "preimenovanje": 
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
-				break;
-			case "izlaz": 
+			case "uredi element":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
 		}
