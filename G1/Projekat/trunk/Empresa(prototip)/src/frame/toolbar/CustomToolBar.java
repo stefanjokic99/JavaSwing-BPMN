@@ -2,7 +2,10 @@ package frame.toolbar;
 
 import javax.swing.JToolBar;
 
-import frame.toolbar.toolbars.ProjekatToolBar;
+import frame.toolbar.toolbars.ToolBarProjekat;
+import frame.toolbar.toolbars.ToolBarSimulacija;
+import frame.toolbar.toolbars.ToolBarUredjivanjeDijagrama;
+import frame.toolbar.toolbars.ToolBarUredjivanjeSvojstvaElementa;
 
 public class CustomToolBar extends JToolBar {
 
@@ -14,9 +17,14 @@ public class CustomToolBar extends JToolBar {
 	
 	public CustomToolBar()
 	{
-		setFloatable(false);
 		addSeparator();
-		add(new ProjekatToolBar());
+		add(new ToolBarProjekat());
+		addSeparator();
+		add(new ToolBarSimulacija());
+		addSeparator();
+		add(new ToolBarUredjivanjeDijagrama());
+		addSeparator();
+		add(new ToolBarUredjivanjeSvojstvaElementa());
 	}
 	
 }

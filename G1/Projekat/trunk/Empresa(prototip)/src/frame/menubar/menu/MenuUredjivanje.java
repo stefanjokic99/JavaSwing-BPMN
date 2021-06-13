@@ -3,6 +3,7 @@ package frame.menubar.menu;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
+import helpers.GeneralHelper;
 import listeners.menu.MenuUredjivanjeActionListener;
 
 public class MenuUredjivanje extends JMenu {
@@ -31,10 +32,12 @@ public class MenuUredjivanje extends JMenu {
 		actionListener = new MenuUredjivanjeActionListener();
 		
 		menuItemPonistiPrethodniKorak = new JMenuItem("Poništi prethodni korak");
+		menuItemPonistiPrethodniKorak.setIcon(GeneralHelper.getIconFromName("arrow_undo"));
 		menuItemPonistiPrethodniKorak.setActionCommand("ponisti prethodni korak");
 		menuItemPonistiPrethodniKorak.addActionListener(actionListener);
 		
 		menuItemPovratiPonisteniKorak = new JMenuItem("Povrati poništeni korak");
+		menuItemPovratiPonisteniKorak.setIcon(GeneralHelper.getIconFromName("arrow_redo"));
 		menuItemPovratiPonisteniKorak.setActionCommand("povrati ponisteni korak");
 		menuItemPovratiPonisteniKorak.addActionListener(actionListener);
 		
@@ -44,14 +47,17 @@ public class MenuUredjivanje extends JMenu {
 		addSeparator();
 		
 		menuItemIsjecanje = new JMenuItem("Isjeci");
+		menuItemIsjecanje.setIcon(GeneralHelper.getIconFromName("cut"));
 		menuItemIsjecanje.setActionCommand("isjecanje");
 		menuItemIsjecanje.addActionListener(actionListener);
 		
 		menuItemKopiranje = new JMenuItem("Kopiraj");
+		menuItemKopiranje.setIcon(GeneralHelper.getIconFromName("clipboard_text"));
 		menuItemKopiranje.setActionCommand("kopiranje");
 		menuItemKopiranje.addActionListener(actionListener);
 		
 		menuItemLijepljenje = new JMenuItem("Zalijepi");
+		menuItemLijepljenje.setIcon(GeneralHelper.getIconFromName("clipboard_paste_image"));
 		menuItemLijepljenje.setActionCommand("lijepljenje");
 		menuItemLijepljenje.addActionListener(actionListener);
 		
