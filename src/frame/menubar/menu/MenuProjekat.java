@@ -84,11 +84,13 @@ public class MenuProjekat extends JMenu {
 		menuItemSacuvaj = new JMenuItem("Sačuvaj");
 		menuItemSacuvaj.setMnemonic(KeyEvent.VK_S);
 		menuItemSacuvaj.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_MASK));
+		menuItemSacuvaj.setIcon(GeneralHelper.getMyIconFromName("save"));
 		menuItemSacuvaj.setActionCommand("sacuvaj");
 		menuItemSacuvaj.addActionListener(actionListener);
 		
 		menuItemSacuvajKao = new JMenuItem("Sačuvaj kao");
 		menuItemSacuvajKao.setActionCommand("sacuvaj kao");
+		menuItemSacuvajKao.setIcon(GeneralHelper.getMyIconFromName("save_as"));
 		menuItemSacuvajKao.addActionListener(actionListener);
 		
 		add(menuItemSacuvaj);

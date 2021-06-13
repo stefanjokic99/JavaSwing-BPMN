@@ -7,12 +7,11 @@ import javax.swing.JButton;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 import javax.swing.JToolBar;
-import javax.swing.Popup;
 
 import helpers.GeneralHelper;
 import listeners.menu.MenuProjekatActionListener;
 
-public class ProjekatToolBar extends JToolBar {
+public class ToolBarProjekat extends JToolBar {
 
 	/**
 	 * 
@@ -23,9 +22,12 @@ public class ProjekatToolBar extends JToolBar {
 	JPopupMenu novi = null;
 	JMenuItem menuItemNoviProjekat = null;
 	JMenuItem menuItemNoviDijagram = null;
+	JButton btnSacuvaj = null;
+	JButton btnSacuvajKao = null;
+	
 	MenuProjekatActionListener actionListener = null;
 	
-	public ProjekatToolBar()
+	public ToolBarProjekat()
 	{	
 		setFloatable(false);
 		
@@ -56,6 +58,19 @@ public class ProjekatToolBar extends JToolBar {
 			}
 		});
 		add(btnNovi);
+		
+		btnSacuvaj = new JButton();
+		btnSacuvaj.setToolTipText("Sacuvaj");
+		btnSacuvaj.setIcon(GeneralHelper.getMyIconFromName("save"));
+		btnSacuvaj.setActionCommand("sacuvaj");
+		btnSacuvaj.addActionListener(actionListener);
+		add(btnSacuvaj);
+		
+		btnSacuvajKao = new JButton();
+		btnSacuvajKao.setIcon(GeneralHelper.getMyIconFromName("save_as"));
+		btnSacuvajKao.setActionCommand("sacuvaj kao");
+		btnSacuvajKao.addActionListener(actionListener);
+		add(btnSacuvajKao);
 	}
 
 }
