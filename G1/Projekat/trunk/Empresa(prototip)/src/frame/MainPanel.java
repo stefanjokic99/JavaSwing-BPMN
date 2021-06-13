@@ -6,6 +6,8 @@ import java.awt.Dimension;
 
 import javax.swing.JPanel;
 
+import frame.toolbar.CustomToolBar;
+
 /**
  * Glavni panel
  * @author Grupa1
@@ -26,12 +28,7 @@ public class MainPanel extends JPanel {
 		
 		//Samo raspored - privremeni kod
 		
-		//Meni
-		JPanel redPanel = new JPanel();
-		redPanel.setBackground(Color.RED);
-		redPanel.setPreferredSize(new Dimension(0,50));
-		add(redPanel,BorderLayout.NORTH);
-		
+
 		//Statusna linija
 		JPanel bluePanel = new JPanel();
 		bluePanel.setBackground(Color.BLUE);

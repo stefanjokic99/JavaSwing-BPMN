@@ -6,6 +6,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
+import helpers.GeneralHelper;
 import listeners.menu.MenuProjekatActionListener;
 
 public class MenuProjekat extends JMenu {
@@ -37,10 +38,12 @@ public class MenuProjekat extends JMenu {
 		menuNovi.setMnemonic(KeyEvent.VK_N);
 		
 		menuItemNoviProjekat = new JMenuItem("Projekat");
+		menuItemNoviProjekat.setIcon(GeneralHelper.getMyIconFromName("create_project"));
 		menuItemNoviProjekat.setActionCommand("novi projekat");
 		menuItemNoviProjekat.addActionListener(actionListener);
 		
 		menuItemNoviDijagram = new JMenuItem("Dijagram");
+		menuItemNoviDijagram.setIcon(GeneralHelper.getMyIconFromName("create_diagram"));
 		menuItemNoviDijagram.setActionCommand("novi dijagram");
 		menuItemNoviDijagram.addActionListener(actionListener);
 		
