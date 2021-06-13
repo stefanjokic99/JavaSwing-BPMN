@@ -47,6 +47,7 @@ public class ProjekatToolBar extends JToolBar {
 		novi.add(menuItemNoviDijagram);
 		
 		btnNovi = new JButton();
+		btnNovi.setToolTipText("Kreiranje");
 		btnNovi.setIcon(GeneralHelper.getMyIconFromName("create_project"));
 		btnNovi.addMouseListener(new MouseAdapter(){
 			public void mousePressed(MouseEvent e)
