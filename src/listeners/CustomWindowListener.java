@@ -10,7 +10,8 @@ public class CustomWindowListener implements WindowListener {
 
 	@Override
 	public void windowClosing(WindowEvent e) {
-		int cuvanje = JOptionPane.showConfirmDialog((Component) e.getSource(), "Da li želite da sačuvate unijete izmjene?", "Čuvanje izmjena", JOptionPane.YES_NO_CANCEL_OPTION);
+		String odgovori[] = {"Da", "Ne", "Odustani"};
+		int cuvanje = JOptionPane.showOptionDialog((Component) e.getSource(), "Da li želite da sačuvate unijete izmjene?", "Izlaz", 0, JOptionPane.WARNING_MESSAGE, null, odgovori, null);
 		if (cuvanje == JOptionPane.YES_OPTION || cuvanje == JOptionPane.NO_OPTION)
 		{
 			if(cuvanje == JOptionPane.YES_OPTION)

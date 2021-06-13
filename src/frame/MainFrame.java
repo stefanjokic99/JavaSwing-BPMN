@@ -1,5 +1,7 @@
 package frame;
 
+import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Point;
@@ -7,6 +9,7 @@ import java.awt.Point;
 import javax.swing.JFrame;
 
 import frame.menubar.CustomMenuBar;
+import frame.toolbar.CustomToolBar;
 import listeners.CustomWindowListener;
 
 /**
@@ -44,7 +47,10 @@ public class MainFrame extends JFrame{
 		setIconImage(java.awt.Toolkit.getDefaultToolkit().getImage("images/logo/logo_no_background.png").getScaledInstance(500, 500, Image.SCALE_SMOOTH));
 		
 		//Dodavanje glavnog panela i menija
-		getContentPane().add(new MainPanel());
+		Container contentPane = getContentPane();
+		contentPane.setLayout(new BorderLayout());
+		contentPane.add(new CustomToolBar(), BorderLayout.NORTH);
+		contentPane.add(new MainPanel(), BorderLayout.CENTER);
 		setJMenuBar(new CustomMenuBar());
 		
 		addWindowListener(new CustomWindowListener());
