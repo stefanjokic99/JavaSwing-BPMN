@@ -5,8 +5,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 
-import frame.toolbar.CustomToolBar;
+import frame.pretrazivacprojekata.PretrazivacProjekata;
+import frame.radnapovrsina.RadnaPovrsina;
 
 /**
  * Glavni panel
@@ -16,6 +18,8 @@ import frame.toolbar.CustomToolBar;
 public class MainPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
+	
+	JTabbedPane tabPretrazivacProjekata = null;
 	
 	/**
 	 * Konstruktor glavnog panela
@@ -35,10 +39,7 @@ public class MainPanel extends JPanel {
 		add(bluePanel,BorderLayout.SOUTH);
 		
 		//Pretrazivac projekata
-		JPanel greenPanel = new JPanel();
-		greenPanel.setBackground(Color.GREEN);
-		greenPanel.setPreferredSize(new Dimension(200,0));
-		add(greenPanel,BorderLayout.WEST);
+		add(new PretrazivacProjekata(),BorderLayout.WEST);
 		
 		//Paleta alatki
 		JPanel yellowPanel = new JPanel();
@@ -47,10 +48,6 @@ public class MainPanel extends JPanel {
 		add(yellowPanel,BorderLayout.EAST);
 		
 		//Radna povrsina
-		JPanel maliPanel = new JPanel();
-		maliPanel.setLocation(250,250);
-		maliPanel.setSize(200,200);
-		maliPanel.setBackground(Color.MAGENTA);
-		add(maliPanel, BorderLayout.CENTER);
+		add(new RadnaPovrsina(), BorderLayout.CENTER);
 	}
 }
