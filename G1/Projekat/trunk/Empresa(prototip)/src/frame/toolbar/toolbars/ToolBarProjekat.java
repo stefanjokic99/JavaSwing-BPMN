@@ -60,13 +60,14 @@ public class ToolBarProjekat extends JToolBar {
 		add(btnNovi);
 		
 		btnSacuvaj = new JButton();
-		btnSacuvaj.setToolTipText("Sacuvaj");
+		btnSacuvaj.setToolTipText("Sačuvaj");
 		btnSacuvaj.setIcon(GeneralHelper.getMyIconFromName("save"));
 		btnSacuvaj.setActionCommand("sacuvaj");
 		btnSacuvaj.addActionListener(actionListener);
 		add(btnSacuvaj);
 		
 		btnSacuvajKao = new JButton();
+		btnSacuvajKao.setToolTipText("Sačuvaj kao");
 		btnSacuvajKao.setIcon(GeneralHelper.getMyIconFromName("save_as"));
 		btnSacuvajKao.setActionCommand("sacuvaj kao");
 		btnSacuvajKao.addActionListener(actionListener);
