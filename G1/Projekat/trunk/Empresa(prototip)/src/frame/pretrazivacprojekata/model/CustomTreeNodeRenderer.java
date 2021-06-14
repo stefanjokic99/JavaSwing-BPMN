@@ -1,5 +1,6 @@
 package frame.pretrazivacprojekata.model;
 
+import java.awt.Color;
 import java.awt.Component;
 
 import javax.swing.BorderFactory;
@@ -18,6 +19,7 @@ public class CustomTreeNodeRenderer implements TreeCellRenderer {
 		JLabel lbl = null;
 		
 		lbl = new JLabel(value.toString());
+		lbl.setOpaque(true);
 		
 		if(leaf)
 		{
@@ -28,8 +30,6 @@ public class CustomTreeNodeRenderer implements TreeCellRenderer {
 			lbl.setIcon(GeneralHelper.getIconFromName("package"));
 		}
 		
-		//Ne radi trenutno
-		/*
 		if(selected == true)
 		{
 			lbl.setBackground(Color.BLUE);
@@ -37,10 +37,10 @@ public class CustomTreeNodeRenderer implements TreeCellRenderer {
 		else
 		{
 			lbl.setBackground(Color.WHITE);
-		}*/
-		
+		}
 		
 		lbl.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+		tree.setRowHeight(20);
 		
 		return lbl;
 	}
