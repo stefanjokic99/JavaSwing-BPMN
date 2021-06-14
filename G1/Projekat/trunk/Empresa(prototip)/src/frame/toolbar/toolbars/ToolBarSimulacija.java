@@ -27,21 +27,21 @@ public class ToolBarSimulacija extends JToolBar {
 		
 		btnStart = new JButton();
 		btnStart.setToolTipText("Započni simulaciju");
-		btnStart.setIcon(GeneralHelper.getIconFromName("control_start"));
+		btnStart.setIcon(GeneralHelper.getMyIconFromName("start"));
 		btnStart.setActionCommand("pokretanje simulacije");
 		btnStart.addActionListener(actionListener);
 		add(btnStart);
 		
 		btnPause = new JButton();
 		btnPause.setToolTipText("Pauziraj simulaciju");
-		btnPause.setIcon(GeneralHelper.getIconFromName("control_pause"));
+		btnPause.setIcon(GeneralHelper.getMyIconFromName("stop"));
 		btnPause.setActionCommand("zaustavljanje simulacije");
 		btnPause.addActionListener(actionListener);
 		add(btnPause);
 		
 		btnStop = new JButton();
 		btnStop.setToolTipText("Zatvarnje simulacije");
-		btnStop.setIcon(GeneralHelper.getIconFromName("control_stop"));
+		btnStop.setIcon(GeneralHelper.getMyIconFromName("pause"));
 		btnStop.setActionCommand("zatvaranje simulacije");
 		btnStop.addActionListener(actionListener);
 		add(btnStop);

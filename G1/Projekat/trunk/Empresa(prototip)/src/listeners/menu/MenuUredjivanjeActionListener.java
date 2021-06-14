@@ -27,9 +27,6 @@ public class MenuUredjivanjeActionListener implements ActionListener {
 			case "lijepljenje":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "oznacavanje":
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
-				break;
 			case "oznaci sve":
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;

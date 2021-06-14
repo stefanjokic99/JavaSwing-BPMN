@@ -3,6 +3,7 @@ package frame.menubar.menu;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
+import helpers.GeneralHelper;
 import listeners.menu.MenuSimulacijaActionListener;
 
 public class MenuSimulacija extends JMenu{
@@ -25,14 +26,17 @@ public class MenuSimulacija extends JMenu{
 		actionListener = new MenuSimulacijaActionListener();
 		
 		menuItemPokretanjeSimulacije = new JMenuItem("Pokreni");
+		menuItemPokretanjeSimulacije.setIcon(GeneralHelper.getMyIconFromName("start"));
 		menuItemPokretanjeSimulacije.setActionCommand("pokretanje simulacije");
 		menuItemPokretanjeSimulacije.addActionListener(actionListener);
 		
 		menuItemZatvaranjeSimulacije = new JMenuItem("Zatvori");
+		menuItemZatvaranjeSimulacije.setIcon(GeneralHelper.getMyIconFromName("stop"));
 		menuItemZatvaranjeSimulacije.setActionCommand("zatvaranje simulacije");
 		menuItemZatvaranjeSimulacije.addActionListener(actionListener);
 		
 		menuItemZaustavljanjeSimulacije = new JMenuItem("Zaustavi");
+		menuItemZaustavljanjeSimulacije.setIcon(GeneralHelper.getMyIconFromName("pause"));
 		menuItemZaustavljanjeSimulacije.setActionCommand("zaustavljanje simulacije");
 		menuItemZaustavljanjeSimulacije.addActionListener(actionListener);
 		

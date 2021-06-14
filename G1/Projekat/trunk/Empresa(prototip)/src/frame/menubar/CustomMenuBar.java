@@ -2,6 +2,7 @@ package frame.menubar;
 
 import javax.swing.JMenuBar;
 
+import frame.menubar.menu.MenuPomoc;
 import frame.menubar.menu.MenuProjekat;
 import frame.menubar.menu.MenuRepozitorijum;
 import frame.menubar.menu.MenuSimulacija;
@@ -20,6 +21,7 @@ public class CustomMenuBar extends JMenuBar {
 			add(new MenuUredjivanje());
 			add(new MenuRepozitorijum());
 			add(new MenuSimulacija());
+			add(new MenuPomoc());
 	}
 
 }

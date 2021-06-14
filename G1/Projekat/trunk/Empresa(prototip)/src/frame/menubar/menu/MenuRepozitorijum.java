@@ -3,6 +3,7 @@ package frame.menubar.menu;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
+import helpers.GeneralHelper;
 import listeners.menu.MenuRepozitorijumActionListener;
 
 public class MenuRepozitorijum extends JMenu {
@@ -24,14 +25,17 @@ public class MenuRepozitorijum extends JMenu {
 		actionListener = new MenuRepozitorijumActionListener();
 		
 		menuItemRegistracija = new JMenuItem("Registracija");
+		menuItemRegistracija.setIcon(GeneralHelper.getMyIconFromName("registration"));
 		menuItemRegistracija.setActionCommand("registracija");
 		menuItemRegistracija.addActionListener(actionListener);
 		
 		menuItemPrijava = new JMenuItem("Prijava");
+		menuItemPrijava.setIcon(GeneralHelper.getMyIconFromName("login"));
 		menuItemPrijava.setActionCommand("prijava");
 		menuItemPrijava.addActionListener(actionListener);
 		
 		menuItemOdjava = new JMenuItem("Odjava");
+		menuItemOdjava.setIcon(GeneralHelper.getMyIconFromName("log_out"));
 		menuItemOdjava.setActionCommand("odjava");
 		menuItemOdjava.addActionListener(actionListener);
 		
