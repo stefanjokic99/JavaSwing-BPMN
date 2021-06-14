@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/frame/menubar/menu/MenuProjekat.java=UTF-8
 encoding//src/frame/menubar/menu/MenuUredjivanje.java=UTF-8
+encoding//src/frame/toolbar/toolbars/ToolBarProjekat.java=UTF-8
 encoding//src/frame/toolbar/toolbars/ToolBarSimulacija.java=UTF-8
 encoding//src/frame/toolbar/toolbars/ToolBarUredjivanjeSvojstvaElementa.java=UTF-8
 encoding//src/listeners/CustomWindowListener.java=UTF-8
