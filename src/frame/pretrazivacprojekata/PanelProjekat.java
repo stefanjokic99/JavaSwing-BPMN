@@ -28,5 +28,7 @@ public class PanelProjekat extends JPanel {
 		stabloProjekata.setShowsRootHandles(true);
 		stabloProjekata.setCellRenderer(new CustomTreeNodeRenderer());
 		add(stabloProjekata);
+
 	}
+
 }
