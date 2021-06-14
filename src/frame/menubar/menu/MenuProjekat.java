@@ -98,7 +98,10 @@ public class MenuProjekat extends JMenu {
 		
 		addSeparator();
 		
-		menuItemStampanje = new JMenuItem("Stampanje");
+		menuItemStampanje = new JMenuItem("Štampanje");
+		menuItemStampanje.setMnemonic(KeyEvent.VK_P);
+		menuItemStampanje.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, KeyEvent.CTRL_MASK));
+		menuItemStampanje.setIcon(GeneralHelper.getIconFromName("printer"));
 		menuItemStampanje.setActionCommand("stampanje");
 		menuItemStampanje.addActionListener(actionListener);
 		
@@ -112,6 +115,7 @@ public class MenuProjekat extends JMenu {
 		addSeparator();
 		
 		menuItemIzlaz = new JMenuItem("Izlaz");
+		menuItemIzlaz.setIcon(GeneralHelper.getMyIconFromName("exit"));
 		menuItemIzlaz.setActionCommand("izlaz");
 		menuItemIzlaz.addActionListener(actionListener);
 		
