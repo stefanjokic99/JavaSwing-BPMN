@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
 import helpers.GeneralHelper;
@@ -31,7 +32,7 @@ public class RadnaPovrsina extends JTabbedPane {
 	GridBagConstraints gbc = null;
 	
 	public RadnaPovrsina() {
-	
+				
 		pnlTab1 = new JPanel(new GridBagLayout());
 		pnlTab2 = new JPanel(new GridBagLayout());
 		
@@ -82,9 +83,18 @@ public class RadnaPovrsina extends JTabbedPane {
 		pnlTab1.add(btnClose1, gbc);
 		pnlTab2.add(btnClose2, gbc);
 		
-		addTab("", null);
+		JScrollPane sp1 = new JScrollPane(new PovrsinaZaCrtanje());
+	    sp1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);  
+        sp1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		
+        JScrollPane sp2 = new JScrollPane(new PovrsinaZaCrtanje());
+	    sp2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);  
+        sp2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		
+        
+		addTab("", sp1);
 		setTabComponentAt(0, pnlTab1);
-		addTab("", null);
+		addTab("", sp2);
 		setTabComponentAt(1, pnlTab2);
 
 	}

@@ -1,16 +1,21 @@
 package frame;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Point;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import frame.menubar.CustomMenuBar;
+import frame.statusbar.StatusBar;
 import frame.toolbar.CustomToolBar;
-import listeners.CustomWindowListener;
 
 /**
  * Glavni prozor
@@ -19,7 +24,8 @@ import listeners.CustomWindowListener;
 public class MainFrame extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
-	
+    protected TimerThread timerThread;
+
 	/**
 	 * Konstruktor glavnog prozora
 	 */
@@ -53,7 +59,40 @@ public class MainFrame extends JFrame{
 		contentPane.add(new MainPanel(), BorderLayout.CENTER);
 		setJMenuBar(new CustomMenuBar());
 		
-		addWindowListener(new CustomWindowListener());
+		//StatusBar
+		 StatusBar statusBar = new StatusBar();
+	     JLabel leftLabel = new JLabel("Your application is running.");
+	     statusBar.setLeftComponent(leftLabel);
+
+	     final JLabel dateLabel = new JLabel();
+	     dateLabel.setHorizontalAlignment(JLabel.CENTER);
+	     statusBar.addRightComponent(dateLabel);
+
+	     final JLabel timeLabel = new JLabel();
+	     timeLabel.setHorizontalAlignment(JLabel.CENTER);
+	     statusBar.addRightComponent(timeLabel);
+
+	     contentPane.add(statusBar, BorderLayout.SOUTH);
+			      
+	     addWindowListener(new WindowAdapter() {
+	            @Override
+	            public void windowClosing(WindowEvent e) {
+	            	String odgovori[] = {"Da", "Ne", "Odustani"};
+	        		int cuvanje = JOptionPane.showOptionDialog((Component) e.getSource(), "Da li želite da sačuvate unijete izmjene?", "Izlaz", 0, JOptionPane.WARNING_MESSAGE, null, odgovori, null);
+	        		if (cuvanje == JOptionPane.YES_OPTION || cuvanje == JOptionPane.NO_OPTION)
+	        		{
+	        			if(cuvanje == JOptionPane.YES_OPTION)
+	        			{
+	        				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+	        			}
+	        	        timerThread.setRunning(false);
+	        			System.exit(0);
+	        		}
+	            }
+	        });
+	     
+	     timerThread = new TimerThread(dateLabel, timeLabel);
+	     timerThread.start();
 		
 		//Podesavanje vidljivosti
 		setVisible(true);

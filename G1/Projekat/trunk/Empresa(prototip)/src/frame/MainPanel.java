@@ -28,18 +28,22 @@ public class MainPanel extends JPanel {
 	{
 		setBackground(Color.WHITE);
 		
-		setLayout(new BorderLayout(5,5));
+		setLayout(new BorderLayout());
 		
 		//Samo raspored - privremeni kod
 		
 
 		//Statusna linija
+		/*
 		JPanel bluePanel = new JPanel();
 		bluePanel.setBackground(Color.BLUE);
 		add(bluePanel,BorderLayout.SOUTH);
-		
+		*/
 		//Pretrazivac projekata
-		add(new PretrazivacProjekata(),BorderLayout.WEST);
+		JPanel pretrazivacProjekata = new JPanel();
+		pretrazivacProjekata.setLayout(new BorderLayout());
+		pretrazivacProjekata.add(new PretrazivacProjekata());
+		add(pretrazivacProjekata,BorderLayout.WEST);
 		
 		//Paleta alatki
 		JPanel yellowPanel = new JPanel();
@@ -48,6 +52,9 @@ public class MainPanel extends JPanel {
 		add(yellowPanel,BorderLayout.EAST);
 		
 		//Radna povrsina
-		add(new RadnaPovrsina(), BorderLayout.CENTER);
+		JPanel centar = new JPanel();
+		centar.setLayout(new BorderLayout());
+		centar.add(new RadnaPovrsina(), BorderLayout.CENTER);
+		add(centar, BorderLayout.CENTER);
 	}
 }
