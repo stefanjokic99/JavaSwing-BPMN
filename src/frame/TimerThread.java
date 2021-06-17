@@ -33,8 +33,8 @@ public class TimerThread extends Thread {
                 public void run() {
                     Calendar currentCalendar = Calendar.getInstance();
                     Date currentTime = currentCalendar.getTime();
-                    dateLabel.setText(dateFormat.format(currentTime));
-                    timeLabel.setText(timeFormat.format(currentTime));
+                    dateLabel.setText("<html><b style = \"color:gray\">" + dateFormat.format(currentTime) + "</b></html>");
+                    timeLabel.setText("<html><b style = \"color:gray\">" + timeFormat.format(currentTime) + "</b></html>");
                 }
             });
 

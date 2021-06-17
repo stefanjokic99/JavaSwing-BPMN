@@ -17,7 +17,7 @@ public class SeparatorPanel extends JPanel {
         this.rightColor = rightColor;
         setOpaque(false);
     }
-
+    
     @Override
     protected void paintComponent(Graphics g) {
         g.setColor(leftColor);

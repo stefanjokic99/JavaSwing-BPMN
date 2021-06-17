@@ -1,6 +1,5 @@
 package frame.radnapovrsina;
 
-import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
@@ -13,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
+import frame.MainFrame;
 import helpers.GeneralHelper;
 
 public class RadnaPovrsina extends JTabbedPane {
@@ -58,7 +58,7 @@ public class RadnaPovrsina extends JTabbedPane {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		
@@ -66,7 +66,7 @@ public class RadnaPovrsina extends JTabbedPane {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 

@@ -25,7 +25,7 @@ public class MainFrame extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
     protected TimerThread timerThread;
-
+    public static Container contentPane;
 	/**
 	 * Konstruktor glavnog prozora
 	 */
@@ -53,7 +53,7 @@ public class MainFrame extends JFrame{
 		setIconImage(java.awt.Toolkit.getDefaultToolkit().getImage("images/logo/logo_no_background.png").getScaledInstance(500, 500, Image.SCALE_SMOOTH));
 		
 		//Dodavanje glavnog panela i menija
-		Container contentPane = getContentPane();
+		contentPane = getContentPane();
 		contentPane.setLayout(new BorderLayout());
 		contentPane.add(new CustomToolBar(), BorderLayout.NORTH);
 		contentPane.add(new MainPanel(), BorderLayout.CENTER);
@@ -61,7 +61,7 @@ public class MainFrame extends JFrame{
 		
 		//StatusBar
 		 StatusBar statusBar = new StatusBar();
-	     JLabel leftLabel = new JLabel("Your application is running.");
+	     JLabel leftLabel = new JLabel("<html><b style=\"color:gray\">Your application is running.</b></html>");
 	     statusBar.setLeftComponent(leftLabel);
 
 	     final JLabel dateLabel = new JLabel();
