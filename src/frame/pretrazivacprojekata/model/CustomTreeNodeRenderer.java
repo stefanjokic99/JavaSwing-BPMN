@@ -30,7 +30,7 @@ public class CustomTreeNodeRenderer implements TreeCellRenderer {
 			lbl.setIcon(GeneralHelper.getIconFromName("package"));
 		}
 		
-		if(selected == true)
+		if(selected)
 		{
 			lbl.setBackground(Color.BLUE);
 		}

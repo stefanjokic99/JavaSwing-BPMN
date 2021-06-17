@@ -3,6 +3,8 @@ package frame.toolbar.toolbars;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -52,10 +54,11 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
+		//btnBold.setMnemonic('b');
 		add(btnBold);
 		
 		btnItalic = new JButton();
-		btnItalic.setToolTipText("Nakosi tekst");
+		btnItalic.setToolTipText("<html><i>Nakosi tekst CTRL+I</i></html");
 		btnItalic.setIcon(GeneralHelper.getIconFromName("text_italic"));
 		btnItalic.addActionListener(new ActionListener() {	
 			@Override

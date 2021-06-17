@@ -3,7 +3,6 @@ package frame.toolbar.toolbars;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 
-import frame.menubar.menu.MenuUredjivanje;
 import helpers.GeneralHelper;
 import listeners.menu.MenuUredjivanjeActionListener;
 
