@@ -1,37 +1,33 @@
-package frame.menubar.menu;
+package frame.popupmenu;
 
 import java.awt.event.KeyEvent;
 
-import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
 import javax.swing.KeyStroke;
 
 import helpers.GeneralHelper;
 import listeners.menu.MenuUredjivanjeActionListener;
 
-public class MenuUredjivanje extends JMenu {
+public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	JMenuItem menuItemPonistiPrethodniKorak = null;
 	JMenuItem menuItemPovratiPonisteniKorak = null;
 	JMenuItem menuItemIsjecanje = null;
 	JMenuItem menuItemKopiranje = null;
 	JMenuItem menuItemLijepljenje = null;
 	JMenuItem menuItemOznaciSve = null;
-	JMenuItem menuItemUbaciElement = null;
 	JMenuItem menuItemObrisiOznaceneElemente = null;
 	JMenuItem menuItemUrediElement = null;
 	
 	MenuUredjivanjeActionListener actionListener = null;
 	
-	public MenuUredjivanje()
-	{
-		setText("Uređivanje");
-		setMnemonic(KeyEvent.VK_E);
+	public PopupMenuPovrsinaZaCrtanje() {
 		
 		actionListener = new MenuUredjivanjeActionListener();
 		
@@ -82,10 +78,6 @@ public class MenuUredjivanje extends JMenu {
 		
 		addSeparator();
 		
-		menuItemUbaciElement = new JMenuItem("Ubaci element");
-		menuItemUbaciElement.setActionCommand("ubaci element");
-		menuItemUbaciElement.addActionListener(actionListener);
-		
 		menuItemObrisiOznaceneElemente = new JMenuItem("Obriši označene elemente     ");
 		menuItemObrisiOznaceneElemente.setIcon(GeneralHelper.getMyIconFromName("delete"));
 		menuItemObrisiOznaceneElemente.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
@@ -96,10 +88,8 @@ public class MenuUredjivanje extends JMenu {
 		menuItemUrediElement.setIcon(GeneralHelper.getMyIconFromName("edit"));
 		menuItemUrediElement.setActionCommand("uredi element");
 		menuItemUrediElement.addActionListener(actionListener);
-		
-		add(menuItemUbaciElement);
+
 		add(menuItemObrisiOznaceneElemente);
 		add(menuItemUrediElement);
 	}
-
 }

@@ -26,9 +26,11 @@ public class MenuProjekat extends JMenu {
 	JMenuItem menuItemStampanje = null;
 	JMenuItem menuItemPreimenovanje = null;
 	JMenuItem menuItemIzlaz = null;
+	
 	MenuProjekatActionListener actionListener = null;
 	
 	public MenuProjekat() {
+		
 		setText("Projekat");
 		setMnemonic(KeyEvent.VK_F);
 		
