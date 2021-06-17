@@ -8,8 +8,9 @@ public class CustomTreeModel extends DefaultMutableTreeNode {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public CustomTreeModel()
-	{
+	
+	public CustomTreeModel() {
+		
 		super("root");
 		
 		DefaultMutableTreeNode projekat1 = new DefaultMutableTreeNode("Projekat 1");

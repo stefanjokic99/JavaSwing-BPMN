@@ -12,8 +12,8 @@ public class PretrazivacProjekata extends JTabbedPane {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	public PretrazivacProjekata()
-	{
+	public PretrazivacProjekata() {
+		
 		JScrollPane scrollPane = new JScrollPane(new PanelProjekat());
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);  
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);  

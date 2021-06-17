@@ -1,27 +1,25 @@
-package frame.menubar.menu;
+package frame.popupmenu;
 
-import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
 
 import helpers.GeneralHelper;
 import listeners.menu.MenuRepozitorijumActionListener;
 
-public class MenuRepozitorijum extends JMenu {
+public class PopupMenuPanelRepozitorijum extends JPopupMenu {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	JMenuItem menuItemRegistracija = null;
 	JMenuItem menuItemPrijava = null;
 	JMenuItem menuItemOdjava = null;
 	
 	MenuRepozitorijumActionListener actionListener = null;
 	
-	public MenuRepozitorijum() {
-		
-		setText("Repozitorijum");
+	public PopupMenuPanelRepozitorijum() {
 		
 		actionListener = new MenuRepozitorijumActionListener();
 		
@@ -30,7 +28,7 @@ public class MenuRepozitorijum extends JMenu {
 		menuItemRegistracija.setActionCommand("registracija");
 		menuItemRegistracija.addActionListener(actionListener);
 		
-		menuItemPrijava = new JMenuItem("Prijava");
+		menuItemPrijava = new JMenuItem("<html><b>Prijava</b></html>");
 		menuItemPrijava.setIcon(GeneralHelper.getMyIconFromName("login"));
 		menuItemPrijava.setActionCommand("prijava");
 		menuItemPrijava.addActionListener(actionListener);
@@ -44,5 +42,4 @@ public class MenuRepozitorijum extends JMenu {
 		add(menuItemPrijava);
 		add(menuItemOdjava);
 	}
-
 }
