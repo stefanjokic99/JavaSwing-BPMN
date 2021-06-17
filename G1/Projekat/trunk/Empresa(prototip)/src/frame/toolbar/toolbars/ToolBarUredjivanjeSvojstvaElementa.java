@@ -1,15 +1,13 @@
 package frame.toolbar.toolbars;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
+import frame.MainFrame;
 import helpers.GeneralHelper;
 
 public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
@@ -38,7 +36,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnVelicina.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		add(btnVelicina);
@@ -51,7 +49,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnBold.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		//btnBold.setMnemonic('b');
@@ -63,7 +61,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnItalic.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		add(btnItalic);
@@ -74,7 +72,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnUnderline.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		add(btnUnderline);
@@ -87,7 +85,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnAlignLeft.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		add(btnAlignLeft);
@@ -98,7 +96,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnAlignCenter.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		add(btnAlignCenter);
@@ -109,7 +107,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnAlignRight.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		add(btnAlignRight);
@@ -120,7 +118,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		btnEditText.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		add(btnEditText);
