@@ -30,15 +30,6 @@ public class MainPanel extends JPanel {
 		
 		setLayout(new BorderLayout());
 		
-		//Samo raspored - privremeni kod
-		
-
-		//Statusna linija
-		/*
-		JPanel bluePanel = new JPanel();
-		bluePanel.setBackground(Color.BLUE);
-		add(bluePanel,BorderLayout.SOUTH);
-		*/
 		//Pretrazivac projekata
 		JPanel pretrazivacProjekata = new JPanel();
 		pretrazivacProjekata.setLayout(new BorderLayout());

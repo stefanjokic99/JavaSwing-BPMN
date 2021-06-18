@@ -107,7 +107,7 @@ public class MenuProjekat extends JMenu {
 		menuItemStampanje.setActionCommand("stampanje");
 		menuItemStampanje.addActionListener(actionListener);
 		
-		menuItemPreimenovanje = new JMenuItem("Preimenovanje");
+		menuItemPreimenovanje = new JMenuItem("Preimenuj");
 		menuItemPreimenovanje.setActionCommand("preimenovanje");
 		menuItemPreimenovanje.addActionListener(actionListener);
 		
