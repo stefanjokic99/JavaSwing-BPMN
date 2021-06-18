@@ -4,6 +4,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import frame.MainFrame;
+import helpers.GeneralHelper;
 
 public class MainClass {
 
@@ -24,6 +25,11 @@ public class MainClass {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		/*
+		UIManager.put("Tree.collapsedIcon", GeneralHelper.getIconFromName("arrow_right"));
+		UIManager.put("Tree.collapsedIcon", GeneralHelper.getIconFromName("arrow_left"));
+		*/
 		new MainFrame();
 
 	}
