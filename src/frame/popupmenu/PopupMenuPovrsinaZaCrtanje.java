@@ -1,11 +1,16 @@
 package frame.popupmenu;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
+import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.KeyStroke;
 
+import frame.MainFrame;
 import helpers.GeneralHelper;
 import listeners.menu.MenuUredjivanjeActionListener;
 
@@ -22,6 +27,7 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 	JMenuItem menuItemKopiranje = null;
 	JMenuItem menuItemLijepljenje = null;
 	JMenuItem menuItemOznaciSve = null;
+	JCheckBoxMenuItem cbMreza = null;
 	JMenuItem menuItemObrisiOznaceneElemente = null;
 	JMenuItem menuItemUrediElement = null;
 	
@@ -76,6 +82,20 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 		add(menuItemLijepljenje);
 		add(menuItemOznaciSve);
 		
+		addSeparator();
+		
+		cbMreza = new JCheckBoxMenuItem("Prikaz mreže za crtanje");
+		cbMreza.setState(true);
+		cbMreza.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cbMreza.setState(true);
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
+		
+		add(cbMreza);
 		addSeparator();
 		
 		menuItemObrisiOznaceneElemente = new JMenuItem("Obriši označene elemente     ");

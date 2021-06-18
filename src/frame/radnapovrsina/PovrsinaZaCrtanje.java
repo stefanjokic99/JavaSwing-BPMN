@@ -1,6 +1,9 @@
 package frame.radnapovrsina;
 
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -17,8 +20,9 @@ public class PovrsinaZaCrtanje extends JPanel {
 	
 	PopupMenuPovrsinaZaCrtanje popup = null;
 	
-	public PovrsinaZaCrtanje()
-	{
+	public PovrsinaZaCrtanje() {
+		
+		setPreferredSize(new Dimension(10000, 10000));
 		popup = new PopupMenuPovrsinaZaCrtanje();
 		
 		setBackground(Color.WHITE);
@@ -41,6 +45,24 @@ public class PovrsinaZaCrtanje extends JPanel {
 			    }
 		}
 		);
-
+		
 	}
+	
+	public void paint(Graphics g )	{  
+		
+		super.paintComponent(g);
+		 
+         Graphics2D g2d = (Graphics2D) g.create();
+         
+         for(int i = -10; i < getWidth(); i+=100)
+         {
+        	 for(int j = -10; j < getHeight(); j+=100)
+        	 {
+        		 g.drawRect(i, j, 1, 1);
+        	 }
+         }
+         
+         g2d.dispose();
+	 }
+
 }
