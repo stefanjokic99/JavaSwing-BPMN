@@ -13,6 +13,8 @@ public class MenuRepozitorijum extends JMenu {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	JMenuItem menuItemEksportovanje = null;
+	JMenuItem menuItemImportovanje= null;
 	JMenuItem menuItemRegistracija = null;
 	JMenuItem menuItemPrijava = null;
 	JMenuItem menuItemOdjava = null;
@@ -24,6 +26,20 @@ public class MenuRepozitorijum extends JMenu {
 		setText("Repozitorijum");
 		
 		actionListener = new MenuRepozitorijumActionListener();
+		
+		menuItemEksportovanje = new JMenuItem("Eksportovanje");
+		menuItemEksportovanje.setIcon(GeneralHelper.getMyIconFromName("export"));
+		menuItemEksportovanje.setActionCommand("eksportovanje");
+		menuItemEksportovanje.addActionListener(actionListener);
+		
+		menuItemImportovanje = new JMenuItem("Importovanje");
+		menuItemImportovanje.setIcon(GeneralHelper.getMyIconFromName("import"));
+		menuItemImportovanje.setActionCommand("importovanje");
+		menuItemImportovanje.addActionListener(actionListener);
+		
+		add(menuItemEksportovanje);
+		add(menuItemImportovanje);
+		addSeparator();
 		
 		menuItemRegistracija = new JMenuItem("Registracija");
 		menuItemRegistracija.setIcon(GeneralHelper.getMyIconFromName("registration"));
