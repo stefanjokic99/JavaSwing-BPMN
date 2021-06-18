@@ -14,6 +14,12 @@ public class MenuRepozitorijumActionListener implements ActionListener {
 		
 		switch(e.getActionCommand())
 		{
+			case "eksportovanje":
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				break;
+			case "importovanje":
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				break;
 			case "registracija":
 				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
