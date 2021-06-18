@@ -34,6 +34,7 @@ public class StatusBar extends JPanel {
 	    }
 
 	    public void setLeftComponent(JComponent component) {
+	    	leftPanel.removeAll();
 	        leftPanel.add(component);
 	    }
 
