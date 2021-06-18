@@ -31,7 +31,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		setFloatable(false);
 
 		btnVelicina = new JButton();
-		btnVelicina.setToolTipText("Velicina elementa");
+		btnVelicina.setToolTipText("Veličina elementa");
 		btnVelicina.setIcon(GeneralHelper.getIconFromName("arrow_out"));
 		btnVelicina.addActionListener(new ActionListener() {	
 			@Override
