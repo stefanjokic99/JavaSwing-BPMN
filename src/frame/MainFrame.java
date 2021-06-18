@@ -8,6 +8,7 @@ import java.awt.Image;
 import java.awt.Point;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,8 +25,12 @@ import frame.toolbar.CustomToolBar;
 public class MainFrame extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
-    protected TimerThread timerThread;
-    public static Container contentPane;
+	
+    protected TimerThread timerThread = null;
+    public static Container contentPane = null;
+    
+    StatusBar statusBar = null;
+    
 	/**
 	 * Konstruktor glavnog prozora
 	 */
@@ -34,6 +39,8 @@ public class MainFrame extends JFrame{
 		Dimension screenSize = null;
 		Dimension frameSize = null;
 		Point location = null;
+		
+		JLabel leftLabel = null;
 		
 		//Postavljanje naslova i nacina iskljucivanja glavnog prozora
 		setTitle("Empresa BPMN");
@@ -60,10 +67,10 @@ public class MainFrame extends JFrame{
 		setJMenuBar(new CustomMenuBar());
 		
 		//StatusBar
-		 StatusBar statusBar = new StatusBar();
-	     JLabel leftLabel = new JLabel("<html><b style=\"color:gray\">Your application is running.</b></html>");
+		 statusBar = new StatusBar();
+	     leftLabel = new JLabel("<html><b style=\"color:gray\">Vaša aplikacija je uspješno pokrenuta</b></html>");
 	     statusBar.setLeftComponent(leftLabel);
-
+	     
 	     final JLabel dateLabel = new JLabel();
 	     dateLabel.setHorizontalAlignment(JLabel.CENTER);
 	     statusBar.addRightComponent(dateLabel);
@@ -71,13 +78,33 @@ public class MainFrame extends JFrame{
 	     final JLabel timeLabel = new JLabel();
 	     timeLabel.setHorizontalAlignment(JLabel.CENTER);
 	     statusBar.addRightComponent(timeLabel);
+	     
+	     timerThread = new TimerThread(dateLabel, timeLabel);
+	     timerThread.start();
 
 	     contentPane.add(statusBar, BorderLayout.SOUTH);
-			      
-	     addWindowListener(new WindowAdapter() {
-	            @Override
-	            public void windowClosing(WindowEvent e) {
-	            	String odgovori[] = {"Da", "Ne", "Odustani"};
+	     setVisible(true);
+
+	     try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e1) {	}
+		leftLabel = new JLabel("<html><b style=\"color:gray\">Pristupanje repozitorijumu...</b></html>");
+	    statusBar.setLeftComponent(leftLabel);
+		setVisible(true);
+
+		try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e1) {	}
+			leftLabel = new JLabel("<html><b style=\"color:gray\">Prijavljeni korisnik: Grupa 1</b></html>");
+		     statusBar.setLeftComponent(leftLabel);
+
+		setVisible(true);
+	      
+	    addWindowListener(new WindowAdapter() {
+	           @Override
+	           public void windowClosing(WindowEvent e) {
+	            
+	        	   String odgovori[] = {"Da", "Ne", "Odustani"};
 	        		int cuvanje = JOptionPane.showOptionDialog((Component) e.getSource(), "Da li želite da sačuvate unijete izmjene?", "Izlaz", 0, JOptionPane.WARNING_MESSAGE, null, odgovori, null);
 	        		if (cuvanje == JOptionPane.YES_OPTION || cuvanje == JOptionPane.NO_OPTION)
 	        		{
@@ -90,12 +117,7 @@ public class MainFrame extends JFrame{
 	        		}
 	            }
 	        });
-	     
-	     timerThread = new TimerThread(dateLabel, timeLabel);
-	     timerThread.start();
 		
-		//Podesavanje vidljivosti
-		setVisible(true);
 	}
 
 }
