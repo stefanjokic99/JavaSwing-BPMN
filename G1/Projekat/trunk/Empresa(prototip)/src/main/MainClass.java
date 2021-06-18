@@ -9,9 +9,12 @@ import helpers.GeneralHelper;
 public class MainClass {
 
 	public static void main(String[] args) {
+		
 		try {
 		UIManager.setLookAndFeel(
 				"com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		UIManager.put("Tree.collapsedIcon", GeneralHelper.getMyIconFromName("arrow_right"));
+		UIManager.put("Tree.expandedIcon", GeneralHelper.getMyIconFromName("arrow_down"));
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -26,12 +29,7 @@ public class MainClass {
 			e.printStackTrace();
 		}
 		
-		/*
-		UIManager.put("Tree.collapsedIcon", GeneralHelper.getIconFromName("arrow_right"));
-		UIManager.put("Tree.collapsedIcon", GeneralHelper.getIconFromName("arrow_left"));
-		*/
 		new MainFrame();
-
 	}
 
 }

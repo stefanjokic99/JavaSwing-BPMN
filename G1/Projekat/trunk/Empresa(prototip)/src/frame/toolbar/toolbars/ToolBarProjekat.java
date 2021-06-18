@@ -66,7 +66,7 @@ public class ToolBarProjekat extends JToolBar {
 		
 		btnNoviPadajuci = new JButton();
 		btnNoviPadajuci.setToolTipText("Kreiranje");
-		btnNoviPadajuci.setIcon(GeneralHelper.getMyIconFromName("create_arrow"));
+		btnNoviPadajuci.setIcon(GeneralHelper.getMyIconFromName("arrow_down_create"));
 		btnNoviPadajuci.addMouseListener(new MouseAdapter(){
 			public void mousePressed(MouseEvent e)
 			{
