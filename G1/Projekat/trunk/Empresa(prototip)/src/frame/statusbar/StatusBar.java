@@ -34,11 +34,13 @@ public class StatusBar extends JPanel {
 	    }
 
 	    public void setLeftComponent(JComponent component) {
+	    	// Lijeva komponenta se restartuje prije postavljanja nove...
 	    	leftPanel.removeAll();
 	        leftPanel.add(component);
 	    }
 
 	    public void addRightComponent(JComponent component) {
+	    	
 	        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEADING, 5, 0));
 	        panel.add(new SeparatorPanel(Color.GRAY, Color.WHITE));
 	        panel.add(component);

@@ -17,10 +17,11 @@ public class MenuSimulacija extends JMenu{
 	JMenuItem menuItemZatvaranjeSimulacije = null;
 	JMenuItem menuItemZaustavljanjeSimulacije = null;
 	JMenuItem menuItemVerifikacijaSimulacije = null;
+	
 	MenuSimulacijaActionListener actionListener = null;
 	
-	public MenuSimulacija()
-	{
+	public MenuSimulacija() {
+		
 		setText("Simulacija");
 		
 		actionListener = new MenuSimulacijaActionListener();
@@ -41,6 +42,7 @@ public class MenuSimulacija extends JMenu{
 		menuItemZaustavljanjeSimulacije.addActionListener(actionListener);
 		
 		menuItemVerifikacijaSimulacije = new JMenuItem("Verifikuj");
+		menuItemVerifikacijaSimulacije.setIcon(GeneralHelper.getIconFromName("accept"));
 		menuItemVerifikacijaSimulacije.setActionCommand("verifikacija simulacije");
 		menuItemVerifikacijaSimulacije.addActionListener(actionListener);
 		

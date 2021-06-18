@@ -44,7 +44,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		addSeparator();
 		
 		btnBold = new JButton();
-		btnBold.setToolTipText("Podebljaj tekst");
+		btnBold.setToolTipText("<html><b>Podebljaj tekst</b></html>");
 		btnBold.setIcon(GeneralHelper.getIconFromName("text_bold"));
 		btnBold.addActionListener(new ActionListener() {	
 			@Override
@@ -56,7 +56,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		add(btnBold);
 		
 		btnItalic = new JButton();
-		btnItalic.setToolTipText("<html><i>Nakosi tekst CTRL+I</i></html");
+		btnItalic.setToolTipText("<html><i>Nakosi tekst</i></html");
 		btnItalic.setIcon(GeneralHelper.getIconFromName("text_italic"));
 		btnItalic.addActionListener(new ActionListener() {	
 			@Override
@@ -67,7 +67,7 @@ public class ToolBarUredjivanjeSvojstvaElementa extends JToolBar {
 		add(btnItalic);
 		
 		btnUnderline = new JButton();
-		btnUnderline.setToolTipText("Podvuci tekst");
+		btnUnderline.setToolTipText("<html><u>Podvuci tekst</u></html>");
 		btnUnderline.setIcon(GeneralHelper.getMyIconFromName("text_underline"));
 		btnUnderline.addActionListener(new ActionListener() {	
 			@Override

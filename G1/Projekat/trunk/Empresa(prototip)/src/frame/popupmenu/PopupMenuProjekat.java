@@ -1,11 +1,15 @@
 package frame.popupmenu;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.KeyStroke;
 
+import frame.MainFrame;
 import helpers.GeneralHelper;
 import listeners.menu.MenuProjekatActionListener;
 
@@ -21,6 +25,7 @@ public class PopupMenuProjekat extends JPopupMenu {
 	JMenuItem menuItemSacuvajKao = null;
 	JMenuItem menuItemPreimenovanje = null;
 	JMenuItem menuItemZatvoriProjekat = null;
+	JMenuItem menuItemVerifikacijaSimulacije = null;
 	
 	MenuProjekatActionListener actionListener = null;
 	
@@ -52,7 +57,7 @@ public class PopupMenuProjekat extends JPopupMenu {
 		add(menuItemSacuvajKao);
 		addSeparator();
 		
-		menuItemPreimenovanje = new JMenuItem("Preimenovanje");
+		menuItemPreimenovanje = new JMenuItem("Preimenuj");
 		menuItemPreimenovanje.setActionCommand("preimenovanje");
 		menuItemPreimenovanje.addActionListener(actionListener);
 		
@@ -64,6 +69,19 @@ public class PopupMenuProjekat extends JPopupMenu {
 		menuItemZatvoriProjekat.addActionListener(actionListener);
 		
 		add(menuItemZatvoriProjekat);
+		addSeparator();
+		
+		menuItemVerifikacijaSimulacije = new JMenuItem("Verifikuj");
+		menuItemVerifikacijaSimulacije.setIcon(GeneralHelper.getIconFromName("accept"));
+		menuItemVerifikacijaSimulacije.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
+		
+		add(menuItemVerifikacijaSimulacije);
 	}
-
+	
 }

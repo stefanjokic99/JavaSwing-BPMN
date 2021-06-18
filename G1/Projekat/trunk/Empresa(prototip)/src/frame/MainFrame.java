@@ -81,7 +81,7 @@ public class MainFrame extends JFrame{
 	     
 	     timerThread = new TimerThread(dateLabel, timeLabel);
 	     timerThread.start();
-
+	     
 	     contentPane.add(statusBar, BorderLayout.SOUTH);
 	     setVisible(true);
 
@@ -90,33 +90,31 @@ public class MainFrame extends JFrame{
 		} catch (InterruptedException e1) {	}
 		leftLabel = new JLabel("<html><b style=\"color:gray\">Pristupanje repozitorijumu...</b></html>");
 	    statusBar.setLeftComponent(leftLabel);
-		setVisible(true);
-
-		try {
+	
+	     try {
 			TimeUnit.SECONDS.sleep(2);
 		} catch (InterruptedException e1) {	}
 			leftLabel = new JLabel("<html><b style=\"color:gray\">Prijavljeni korisnik: Grupa 1</b></html>");
 		     statusBar.setLeftComponent(leftLabel);
-
-		setVisible(true);
-	      
-	    addWindowListener(new WindowAdapter() {
-	           @Override
-	           public void windowClosing(WindowEvent e) {
-	            
-	        	   String odgovori[] = {"Da", "Ne", "Odustani"};
-	        		int cuvanje = JOptionPane.showOptionDialog((Component) e.getSource(), "Da li želite da sačuvate unijete izmjene?", "Izlaz", 0, JOptionPane.WARNING_MESSAGE, null, odgovori, null);
-	        		if (cuvanje == JOptionPane.YES_OPTION || cuvanje == JOptionPane.NO_OPTION)
-	        		{
-	        			if(cuvanje == JOptionPane.YES_OPTION)
-	        			{
-	        				JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
-	        			}
-	        	        timerThread.setRunning(false);
-	        			System.exit(0);
-	        		}
-	            }
-	        });
+	    
+		 //Window Listener
+		 addWindowListener(new WindowAdapter() {
+			  @Override
+			  public void windowClosing(WindowEvent e) {
+			   
+				   String odgovori[] = {"Da", "Ne", "Odustani"};
+					int cuvanje = JOptionPane.showOptionDialog((Component) e.getSource(), "Da li želite da sačuvate unijete izmjene?", "Izlaz", 0, JOptionPane.WARNING_MESSAGE, null, odgovori, null);
+					if (cuvanje == JOptionPane.YES_OPTION || cuvanje == JOptionPane.NO_OPTION)
+					{
+						if(cuvanje == JOptionPane.YES_OPTION)
+						{
+							JOptionPane.showMessageDialog((Component) e.getSource(), "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+						}
+				        timerThread.setRunning(false);
+						System.exit(0);
+					}
+			   }
+			});
 		
 	}
 
