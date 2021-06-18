@@ -1,13 +1,17 @@
 package frame.toolbar.toolbars;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.JToolBar;
 
+import frame.MainFrame;
 import helpers.GeneralHelper;
 import listeners.menu.MenuProjekatActionListener;
 
@@ -19,6 +23,7 @@ public class ToolBarProjekat extends JToolBar {
 	private static final long serialVersionUID = 1L;
 	
 	JButton btnNovi = null;
+	JButton btnNoviPadajuci = null;
 	JPopupMenu novi = null;
 	JMenuItem menuItemNoviProjekat = null;
 	JMenuItem menuItemNoviDijagram = null;
@@ -51,13 +56,26 @@ public class ToolBarProjekat extends JToolBar {
 		btnNovi = new JButton();
 		btnNovi.setToolTipText("Kreiranje");
 		btnNovi.setIcon(GeneralHelper.getMyIconFromName("create_project"));
-		btnNovi.addMouseListener(new MouseAdapter(){
+		btnNovi.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);				
+			}
+		});
+
+		
+		btnNoviPadajuci = new JButton();
+		btnNoviPadajuci.setToolTipText("Kreiranje");
+		btnNoviPadajuci.setIcon(GeneralHelper.getMyIconFromName("create_arrow"));
+		btnNoviPadajuci.addMouseListener(new MouseAdapter(){
 			public void mousePressed(MouseEvent e)
 			{
 				novi.show(e.getComponent(), e.getX(), e.getY());
 			}
 		});
+		
 		add(btnNovi);
+		add(btnNoviPadajuci);
 		
 		btnSacuvaj = new JButton();
 		btnSacuvaj.setToolTipText("Sačuvaj");

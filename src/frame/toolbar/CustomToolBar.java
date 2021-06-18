@@ -6,6 +6,7 @@ import frame.toolbar.toolbars.ToolBarProjekat;
 import frame.toolbar.toolbars.ToolBarSimulacija;
 import frame.toolbar.toolbars.ToolBarUredjivanjeDijagrama;
 import frame.toolbar.toolbars.ToolBarUredjivanjeSvojstvaElementa;
+import frame.toolbar.toolbars.ToolBarZoom;
 
 public class CustomToolBar extends JToolBar {
 
@@ -23,6 +24,8 @@ public class CustomToolBar extends JToolBar {
 		add(new ToolBarSimulacija());
 		addSeparator();
 		add(new ToolBarUredjivanjeDijagrama());
+		addSeparator();
+		add(new ToolBarZoom());
 		addSeparator();
 		add(new ToolBarUredjivanjeSvojstvaElementa());
 	}
