@@ -29,6 +29,7 @@ public class PopupMenuProjekat extends JPopupMenu {
 	
 	MenuProjekatActionListener actionListener = null;
 	
+	@SuppressWarnings("deprecation")
 	public PopupMenuProjekat() {
 		
 		actionListener = new MenuProjekatActionListener();

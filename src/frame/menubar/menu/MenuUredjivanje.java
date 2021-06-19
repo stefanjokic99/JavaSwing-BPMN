@@ -28,6 +28,7 @@ public class MenuUredjivanje extends JMenu {
 	
 	MenuUredjivanjeActionListener actionListener = null;
 	
+	@SuppressWarnings("deprecation")
 	public MenuUredjivanje()
 	{
 		setText("Uređivanje");

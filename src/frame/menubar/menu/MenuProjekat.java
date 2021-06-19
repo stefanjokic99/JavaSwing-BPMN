@@ -28,6 +28,7 @@ public class MenuProjekat extends JMenu {
 	
 	MenuProjekatActionListener actionListener = null;
 	
+	@SuppressWarnings("deprecation")
 	public MenuProjekat() {
 		
 		setText("Projekat");

@@ -33,6 +33,7 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 	
 	MenuUredjivanjeActionListener actionListener = null;
 	
+	@SuppressWarnings("deprecation")
 	public PopupMenuPovrsinaZaCrtanje() {
 		
 		actionListener = new MenuUredjivanjeActionListener();
