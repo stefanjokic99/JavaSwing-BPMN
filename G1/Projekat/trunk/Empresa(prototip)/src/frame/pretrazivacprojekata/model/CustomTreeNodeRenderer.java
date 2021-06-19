@@ -36,7 +36,7 @@ public class CustomTreeNodeRenderer implements TreeCellRenderer {
 		
 		if(selected)
 		{
-			lbl.setBackground(Color.BLUE);
+			lbl.setBackground(new Color(238, 238, 238));
 			
 				tree.addMouseListener(new MouseAdapter() {
 					

@@ -1,5 +1,6 @@
 package frame.paletaalatki;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,10 +19,11 @@ public class Element extends JButton {
 	
 	public Element(String slika) {
 	
-	//	setOpaque(false);             
-	//	setContentAreaFilled(false);  
-	//	setBorderPainted(false);   
-	//	setBackground(Color.WHITE);
+		setPreferredSize(new Dimension(50,70));
+		
+		setOpaque(false);             
+		setContentAreaFilled(false);  
+		setBorderPainted(false);   
 		
 		setIcon(GeneralHelper.getElementIconFromName(slika));
 		

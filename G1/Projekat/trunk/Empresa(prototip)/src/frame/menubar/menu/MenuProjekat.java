@@ -19,12 +19,11 @@ public class MenuProjekat extends JMenu {
 	JMenuItem menuItemNoviDijagram = null;
 	JMenuItem menuItemOtvoriProjekat = null;
 	JMenuItem menuItemOtvoriDijagram = null;
-	JMenuItem menuItemZatvoriProjekat = null;
-	JMenuItem menuItemZatvoriSveProjekte = null;
 	JMenuItem menuItemSacuvaj = null;
 	JMenuItem menuItemSacuvajKao = null;
 	JMenuItem menuItemStampanje = null;
 	JMenuItem menuItemPreimenovanje = null;
+	JMenuItem menuItemZatvoriProjekat = null;
 	JMenuItem menuItemIzlaz = null;
 	
 	MenuProjekatActionListener actionListener = null;
@@ -57,29 +56,18 @@ public class MenuProjekat extends JMenu {
 		menuOtvori.setMnemonic(KeyEvent.VK_O);
 		
 		menuItemOtvoriProjekat = new JMenuItem("Projekat");
+		menuItemOtvoriProjekat.setIcon(GeneralHelper.getMyIconFromName("create_project"));
 		menuItemOtvoriProjekat.setActionCommand("otvori projekat");
 		menuItemOtvoriProjekat.addActionListener(actionListener);
 		
 		menuItemOtvoriDijagram = new JMenuItem("Dijagram");
+		menuItemOtvoriDijagram.setIcon(GeneralHelper.getMyIconFromName("create_diagram"));
 		menuItemOtvoriDijagram.setActionCommand("otvori dijagram");
 		menuItemOtvoriDijagram.addActionListener(actionListener);
 		
 		menuOtvori.add(menuItemOtvoriProjekat);
 		menuOtvori.add(menuItemOtvoriDijagram);
 		add(menuOtvori);
-		
-		addSeparator();
-		
-		menuItemZatvoriProjekat = new JMenuItem("Zatvori projekat");
-		menuItemZatvoriProjekat.setActionCommand("zatvori projekat");
-		menuItemZatvoriProjekat.addActionListener(actionListener);
-		
-		menuItemZatvoriSveProjekte = new JMenuItem("Zatvori sve projekte");
-		menuItemZatvoriSveProjekte.setActionCommand("zatvori sve projekte");
-		menuItemZatvoriSveProjekte.addActionListener(actionListener);
-		
-		add(menuItemZatvoriProjekat);
-		add(menuItemZatvoriSveProjekte);
 		
 		addSeparator();
 		
@@ -115,6 +103,15 @@ public class MenuProjekat extends JMenu {
 		add(menuItemPreimenovanje);
 		
 		addSeparator();
+		
+		menuItemZatvoriProjekat = new JMenuItem("Zatvori projekat");
+		menuItemZatvoriProjekat.setActionCommand("zatvori projekat");
+		menuItemZatvoriProjekat.addActionListener(actionListener);
+		
+		add(menuItemZatvoriProjekat);   
+		
+		addSeparator();
+
 		
 		menuItemIzlaz = new JMenuItem("Izlaz");
 		menuItemIzlaz.setIcon(GeneralHelper.getMyIconFromName("exit"));

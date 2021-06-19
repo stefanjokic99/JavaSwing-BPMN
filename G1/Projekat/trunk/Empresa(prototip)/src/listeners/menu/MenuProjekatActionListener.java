@@ -26,12 +26,6 @@ public class MenuProjekatActionListener implements ActionListener{
 			case "otvori dijagram": 
 				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "zatvori projekat": 
-				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
-				break;
-			case "zatvori sve projekte": 
-				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
-				break;
 			case "sacuvaj": 
 				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
@@ -42,6 +36,9 @@ public class MenuProjekatActionListener implements ActionListener{
 				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
 			case "preimenovanje": 
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				break;
+			case "zatvori projekat": 
 				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
 			case "izlaz": 
