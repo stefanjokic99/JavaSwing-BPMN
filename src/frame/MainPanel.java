@@ -40,9 +40,10 @@ public class MainPanel extends JPanel {
 		
 		//Paleta alatki
 		JScrollPane paleta = new JScrollPane(new PaletaAlatki());
-		paleta.setPreferredSize(new Dimension(200,0));
+		paleta.setPreferredSize(new Dimension(220,0));
 		paleta.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		paleta.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		paleta.getVerticalScrollBar().setUnitIncrement(16);
 		add(paleta,BorderLayout.EAST);
 		
 		//Radna povrsina
