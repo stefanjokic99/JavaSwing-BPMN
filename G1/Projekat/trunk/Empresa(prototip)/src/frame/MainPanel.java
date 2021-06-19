@@ -5,8 +5,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
+import frame.paletaalatki.PaletaAlatki;
 import frame.pretrazivacprojekata.PretrazivacProjekata;
 import frame.radnapovrsina.RadnaPovrsina;
 
@@ -37,10 +39,11 @@ public class MainPanel extends JPanel {
 		add(pretrazivacProjekata,BorderLayout.WEST);
 		
 		//Paleta alatki
-		JPanel yellowPanel = new JPanel();
-		yellowPanel.setBackground(Color.YELLOW);
-		yellowPanel.setPreferredSize(new Dimension(200,0));
-		add(yellowPanel,BorderLayout.EAST);
+		JScrollPane paleta = new JScrollPane(new PaletaAlatki());
+		paleta.setPreferredSize(new Dimension(200,0));
+		paleta.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		paleta.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		add(paleta,BorderLayout.EAST);
 		
 		//Radna povrsina
 		JPanel centar = new JPanel();
