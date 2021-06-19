@@ -16,4 +16,8 @@ public class GeneralHelper {
 		Image iconImage = Toolkit.getDefaultToolkit().getImage("images/myIcons/" + iconName +  ".png");
 		return new ImageIcon(iconImage);
 	}
+	public static Icon getElementIconFromName(String iconName) {
+		Image iconImage = Toolkit.getDefaultToolkit().getImage("images/elements/" + iconName +  ".png");
+		return new ImageIcon(iconImage);
+	}
 }
