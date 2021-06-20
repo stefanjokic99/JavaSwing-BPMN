@@ -1,8 +1,5 @@
 package frame.paletaalatki;
 
-import java.awt.Component;
-import java.awt.Dimension;
-
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -12,6 +9,7 @@ import frame.paletaalatki.palete.Artefakti;
 import frame.paletaalatki.palete.ElementiSpajanja;
 import frame.paletaalatki.palete.ElementiToka;
 import frame.paletaalatki.palete.Particije;
+import helpers.GeneralHelper;
 
 public class PaletaAlatki extends JPanel {
 
@@ -31,30 +29,22 @@ public class PaletaAlatki extends JPanel {
 		setBorder(BorderFactory.createEtchedBorder());
 		
 		lblNaslovElementiToka = new JLabel("<html><font size=\"4\"><b>Elementi toka<b></fontsize></html>");
-		lblNaslovElementiToka.setPreferredSize(new Dimension(200, 30));
-		lblNaslovElementiToka.setAlignmentX(Component.CENTER_ALIGNMENT);
-		add(lblNaslovElementiToka);
+		add(GeneralHelper.getHelperPanel(lblNaslovElementiToka));
 		
 		add(new ElementiToka());
 		
 		lblNaslovElementiSpajanja = new JLabel("<html><font size=\"4\"><b>Elementi spajanja<b></fontsize></html>");
-		lblNaslovElementiSpajanja.setPreferredSize(new Dimension(200, 30));
-		lblNaslovElementiSpajanja.setAlignmentX(Component.CENTER_ALIGNMENT);
-		add(lblNaslovElementiSpajanja);
+		add(GeneralHelper.getHelperPanel(lblNaslovElementiSpajanja));
 		
 		add(new ElementiSpajanja());
 		
 		lblNaslovParticije = new JLabel("<html><font size=\"4\"><b>Particije<b></fontsize></html>");
-		lblNaslovParticije.setPreferredSize(new Dimension(200, 30));
-		lblNaslovParticije.setAlignmentX(Component.CENTER_ALIGNMENT);
-		add(lblNaslovParticije);
+		add(GeneralHelper.getHelperPanel(lblNaslovParticije));
 		
 		add(new Particije());
 		
 		lblNaslovArtefakti = new JLabel("<html><font size=\"4\"><b>Artefakti<b></fontsize></html>");
-		lblNaslovArtefakti.setPreferredSize(new Dimension(200, 30));
-		lblNaslovArtefakti.setAlignmentX(Component.CENTER_ALIGNMENT);
-		add(lblNaslovArtefakti);
+		add(GeneralHelper.getHelperPanel(lblNaslovArtefakti));
 		
 		add(new Artefakti());
 	}
