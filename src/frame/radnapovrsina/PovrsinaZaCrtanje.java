@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
 
 import frame.popupmenu.PopupMenuPovrsinaZaCrtanje;
+import helpers.GeneralHelper;
 
 public class PovrsinaZaCrtanje extends JPanel {
 
@@ -19,7 +20,7 @@ public class PovrsinaZaCrtanje extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
 	PopupMenuPovrsinaZaCrtanje popup = null;
-	
+		
 	public PovrsinaZaCrtanje() {
 		
 		setPreferredSize(new Dimension(10000, 10000));
@@ -62,6 +63,10 @@ public class PovrsinaZaCrtanje extends JPanel {
         	 }
          }
          
+         //Iscrtavanje testnog Dijagrama
+        g2d.drawImage(GeneralHelper.getTestDiagram("images/testDiagrams/Modelovanje procesa - kandidat i poslodavac.png"), 
+        		5100, 5100, 700, 400, this);
+       
          g2d.dispose();
 	 }
 
