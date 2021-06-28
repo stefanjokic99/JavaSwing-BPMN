@@ -117,8 +117,13 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 		addSeparator();
 		
 		menuItemZatvori = new JMenuItem("Zatvori");
-		menuItemZatvori.setActionCommand("zatvori");
-		menuItemZatvori.addActionListener(actionListener);
+		menuItemZatvori.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);				
+			}
+		});
 		
 		add(menuItemZatvori);
 	}
