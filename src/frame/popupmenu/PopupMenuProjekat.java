@@ -24,7 +24,8 @@ public class PopupMenuProjekat extends JPopupMenu {
 	JMenuItem menuItemSacuvaj = null;
 	JMenuItem menuItemSacuvajKao = null;
 	JMenuItem menuItemPreimenovanje = null;
-	JMenuItem menuItemZatvoriProjekat = null;
+	JMenuItem menuItemObrisi = null;
+	JMenuItem menuItemZatvori = null;
 	JMenuItem menuItemVerifikacijaSimulacije = null;
 	
 	MenuProjekatActionListener actionListener = null;
@@ -62,14 +63,21 @@ public class PopupMenuProjekat extends JPopupMenu {
 		menuItemPreimenovanje.setActionCommand("preimenovanje");
 		menuItemPreimenovanje.addActionListener(actionListener);
 		
+		menuItemObrisi = new JMenuItem("Obriši");
+		menuItemObrisi.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
+		menuItemObrisi.setIcon(GeneralHelper.getMyIconFromName("delete"));
+		menuItemObrisi.setActionCommand("obrisi");
+		menuItemObrisi.addActionListener(actionListener);
+		
 		add(menuItemPreimenovanje);
+		add(menuItemObrisi);
 		addSeparator();
 		
-		menuItemZatvoriProjekat = new JMenuItem("Zatvori projekat");
-		menuItemZatvoriProjekat.setActionCommand("zatvori projekat");
-		menuItemZatvoriProjekat.addActionListener(actionListener);
+		menuItemZatvori = new JMenuItem("Zatvori");
+		menuItemZatvori.setActionCommand("zatvori");
+		menuItemZatvori.addActionListener(actionListener);
 		
-		add(menuItemZatvoriProjekat);
+		add(menuItemZatvori);
 		addSeparator();
 		
 		menuItemVerifikacijaSimulacije = new JMenuItem("Verifikuj");

@@ -30,6 +30,7 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 	JCheckBoxMenuItem cbMreza = null;
 	JMenuItem menuItemObrisiOznaceneElemente = null;
 	JMenuItem menuItemUrediElement = null;
+	JMenuItem menuItemZatvori = null;
 	
 	MenuUredjivanjeActionListener actionListener = null;
 	
@@ -100,8 +101,7 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 		addSeparator();
 		
 		menuItemObrisiOznaceneElemente = new JMenuItem("Obriši označene elemente     ");
-		menuItemObrisiOznaceneElemente.setIcon(GeneralHelper.getMyIconFromName("delete"));
-		menuItemObrisiOznaceneElemente.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
+		menuItemObrisiOznaceneElemente.setIcon(GeneralHelper.getMyIconFromName("eraser"));
 		menuItemObrisiOznaceneElemente.setActionCommand("obrisi oznacene elemente");
 		menuItemObrisiOznaceneElemente.addActionListener(actionListener);
 		
@@ -112,5 +112,13 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 
 		add(menuItemObrisiOznaceneElemente);
 		add(menuItemUrediElement);
+		
+		addSeparator();
+		
+		menuItemZatvori = new JMenuItem("Zatvori");
+		menuItemZatvori.setActionCommand("zatvori");
+		menuItemZatvori.addActionListener(actionListener);
+		
+		add(menuItemZatvori);
 	}
 }

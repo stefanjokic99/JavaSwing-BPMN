@@ -23,7 +23,8 @@ public class MenuProjekat extends JMenu {
 	JMenuItem menuItemSacuvajKao = null;
 	JMenuItem menuItemStampanje = null;
 	JMenuItem menuItemPreimenovanje = null;
-	JMenuItem menuItemZatvoriProjekat = null;
+	JMenuItem menuItemObrisi = null;
+	JMenuItem menuItemZatvori = null;
 	JMenuItem menuItemIzlaz = null;
 	
 	MenuProjekatActionListener actionListener = null;
@@ -96,20 +97,30 @@ public class MenuProjekat extends JMenu {
 		menuItemStampanje.setActionCommand("stampanje");
 		menuItemStampanje.addActionListener(actionListener);
 		
+		add(menuItemStampanje);
+		
+		addSeparator();
+		
 		menuItemPreimenovanje = new JMenuItem("Preimenuj");
 		menuItemPreimenovanje.setActionCommand("preimenovanje");
 		menuItemPreimenovanje.addActionListener(actionListener);
 		
-		add(menuItemStampanje);
+		menuItemObrisi = new JMenuItem("Obriši");
+		menuItemObrisi.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
+		menuItemObrisi.setIcon(GeneralHelper.getMyIconFromName("delete"));
+		menuItemObrisi.setActionCommand("obrisi");
+		menuItemObrisi.addActionListener(actionListener);
+		
 		add(menuItemPreimenovanje);
+		add(menuItemObrisi);
 		
 		addSeparator();
 		
-		menuItemZatvoriProjekat = new JMenuItem("Zatvori projekat");
-		menuItemZatvoriProjekat.setActionCommand("zatvori projekat");
-		menuItemZatvoriProjekat.addActionListener(actionListener);
+		menuItemZatvori = new JMenuItem("Zatvori");
+		menuItemZatvori.setActionCommand("zatvori");
+		menuItemZatvori.addActionListener(actionListener);
 		
-		add(menuItemZatvoriProjekat);   
+		add(menuItemZatvori);   
 		
 		addSeparator();
 
