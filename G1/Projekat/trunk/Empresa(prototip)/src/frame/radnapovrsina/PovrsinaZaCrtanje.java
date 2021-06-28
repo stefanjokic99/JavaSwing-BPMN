@@ -43,7 +43,6 @@ public class PovrsinaZaCrtanje extends JPanel {
          }
          
          //Iscrtavanje testnog Dijagrama
-         
 	       g2d.drawImage(GeneralHelper.getTestDiagram("images/testDiagrams/BPMN dijagram - prikaz.png"), 
 	        		5010, 5010, 800, 500, this);
 	            

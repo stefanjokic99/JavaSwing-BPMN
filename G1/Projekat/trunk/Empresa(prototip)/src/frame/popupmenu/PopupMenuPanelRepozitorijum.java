@@ -37,6 +37,7 @@ public class PopupMenuPanelRepozitorijum extends JPopupMenu {
 		
 		add(menuItemEksportovanje);
 		add(menuItemImportovanje);
+		
 		addSeparator();
 		
 		menuItemRegistracija = new JMenuItem("Registracija");
