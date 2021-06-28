@@ -38,7 +38,10 @@ public class MenuProjekatActionListener implements ActionListener{
 			case "preimenovanje": 
 				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
-			case "zatvori projekat": 
+			case "obrisi": 
+				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
+				break;
+			case "zatvori": 
 				JOptionPane.showMessageDialog(MainFrame.contentPane, "Funkcija u implementaciji!!!", "Poruka", JOptionPane.INFORMATION_MESSAGE);
 				break;
 			case "izlaz": 

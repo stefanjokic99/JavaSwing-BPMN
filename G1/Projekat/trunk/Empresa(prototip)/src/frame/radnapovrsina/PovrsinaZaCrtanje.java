@@ -4,8 +4,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
@@ -27,28 +25,9 @@ public class PovrsinaZaCrtanje extends JPanel {
 		popup = new PopupMenuPovrsinaZaCrtanje();
 		
 		setBackground(Color.WHITE);
-		
-		addMouseListener(new MouseAdapter() {
-			
-			 public void mousePressed(MouseEvent e) {
-			        maybeShowPopup(e);
-			    }
-
-			    public void mouseReleased(MouseEvent e) {
-			        maybeShowPopup(e);
-			    }
-
-			    private void maybeShowPopup(MouseEvent e) {
-			        if (e.isPopupTrigger()) {
-			            popup.show(e.getComponent(),
-			                       e.getX(), e.getY());
-			        }
-			    }
-		}
-		);
-		
+		setComponentPopupMenu(popup);
 	}
-	
+
 	public void paint(Graphics g )	{  
 		
 		super.paintComponent(g);
@@ -64,10 +43,11 @@ public class PovrsinaZaCrtanje extends JPanel {
          }
          
          //Iscrtavanje testnog Dijagrama
-        g2d.drawImage(GeneralHelper.getTestDiagram("images/testDiagrams/Modelovanje procesa - kandidat i poslodavac.png"), 
-        		5100, 5100, 700, 400, this);
-       
-         g2d.dispose();
+         
+	       g2d.drawImage(GeneralHelper.getTestDiagram("images/testDiagrams/BPMN dijagram - prikaz.png"), 
+	        		5010, 5010, 800, 500, this);
+	            
+	       g2d.dispose();
 	 }
-
+	
 }
