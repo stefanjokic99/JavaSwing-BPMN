@@ -41,6 +41,7 @@ public class PopupMenuProjekat extends JPopupMenu {
 		menuItemNoviDijagram.addActionListener(actionListener);
 		
 		add(menuItemNoviDijagram);
+		
 		addSeparator();
 		
 		menuItemSacuvaj = new JMenuItem("Sačuvaj");
@@ -57,6 +58,7 @@ public class PopupMenuProjekat extends JPopupMenu {
 		
 		add(menuItemSacuvaj);
 		add(menuItemSacuvajKao);
+		
 		addSeparator();
 		
 		menuItemPreimenovanje = new JMenuItem("Preimenuj");
@@ -71,6 +73,7 @@ public class PopupMenuProjekat extends JPopupMenu {
 		
 		add(menuItemPreimenovanje);
 		add(menuItemObrisi);
+		
 		addSeparator();
 		
 		menuItemZatvori = new JMenuItem("Zatvori");
@@ -78,6 +81,7 @@ public class PopupMenuProjekat extends JPopupMenu {
 		menuItemZatvori.addActionListener(actionListener);
 		
 		add(menuItemZatvori);
+		
 		addSeparator();
 		
 		menuItemVerifikacijaSimulacije = new JMenuItem("Verifikuj");

@@ -98,6 +98,7 @@ public class PopupMenuPovrsinaZaCrtanje extends JPopupMenu {
 		});
 		
 		add(cbMreza);
+		
 		addSeparator();
 		
 		menuItemObrisiOznaceneElemente = new JMenuItem("Obriši označene elemente     ");

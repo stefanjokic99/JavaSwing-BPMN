@@ -39,6 +39,7 @@ public class MenuRepozitorijum extends JMenu {
 		
 		add(menuItemEksportovanje);
 		add(menuItemImportovanje);
+		
 		addSeparator();
 		
 		menuItemRegistracija = new JMenuItem("Registracija");

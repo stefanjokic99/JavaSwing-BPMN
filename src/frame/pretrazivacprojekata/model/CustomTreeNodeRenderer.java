@@ -55,14 +55,11 @@ public class CustomTreeNodeRenderer implements TreeCellRenderer {
 					        }
 					    }
 					});
-			
 		}
 		else
 		{
 			lbl.setBackground(Color.WHITE);
 		}
-		
-	
 		
 		lbl.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		tree.setRowHeight(20);

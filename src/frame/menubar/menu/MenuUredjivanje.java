@@ -88,8 +88,7 @@ public class MenuUredjivanje extends JMenu {
 		menuItemUbaciElement.addActionListener(actionListener);
 		
 		menuItemObrisiOznaceneElemente = new JMenuItem("Obriši označene elemente     ");
-		menuItemObrisiOznaceneElemente.setIcon(GeneralHelper.getMyIconFromName("delete"));
-		menuItemObrisiOznaceneElemente.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
+		menuItemObrisiOznaceneElemente.setIcon(GeneralHelper.getMyIconFromName("eraser"));
 		menuItemObrisiOznaceneElemente.setActionCommand("obrisi oznacene elemente");
 		menuItemObrisiOznaceneElemente.addActionListener(actionListener);
 		

@@ -40,16 +40,18 @@ public class MenuSimulacija extends JMenu{
 		menuItemZaustavljanjeSimulacije.setIcon(GeneralHelper.getMyIconFromName("pause"));
 		menuItemZaustavljanjeSimulacije.setActionCommand("zaustavljanje simulacije");
 		menuItemZaustavljanjeSimulacije.addActionListener(actionListener);
+
+		add(menuItemPokretanjeSimulacije);
+		add(menuItemZatvaranjeSimulacije);
+		add(menuItemZaustavljanjeSimulacije);
+		
+		addSeparator();
 		
 		menuItemVerifikacijaSimulacije = new JMenuItem("Verifikuj");
 		menuItemVerifikacijaSimulacije.setIcon(GeneralHelper.getIconFromName("accept"));
 		menuItemVerifikacijaSimulacije.setActionCommand("verifikacija simulacije");
 		menuItemVerifikacijaSimulacije.addActionListener(actionListener);
 		
-		add(menuItemPokretanjeSimulacije);
-		add(menuItemZatvaranjeSimulacije);
-		add(menuItemZaustavljanjeSimulacije);
-		addSeparator();
 		add(menuItemVerifikacijaSimulacije);
 	}
 }
